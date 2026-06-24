@@ -45,12 +45,10 @@ body{
     animation: fadeIn 60ms ease forwards;
 }
 
-/* ===== Центральные часы ===== */
-
 .center-clock{
     position:fixed;
-    left:47.9%;
-    top:42%;
+    left:48%;
+    top:40%;
     transform:translate(-50%,-50%);
     text-align:center;
     user-select:none;
@@ -103,8 +101,6 @@ body{
     }
 }
 
-/* ===== Стеклянные панели ===== */
-
 .panel{
     background:rgba(0,0,0,0.35);
 
@@ -115,8 +111,6 @@ body{
 
     border-radius:20px;
 }
-
-/* ===== Левая панель ===== */
 
 .side-panel{
     position:fixed;
@@ -133,8 +127,6 @@ body{
     padding:18px;
 }
 
-/* ===== Нижний док ===== */
-
 .dock{
     position:fixed;
 
@@ -149,11 +141,9 @@ body{
     padding:18px 22px;
 }
 
-/* ===== Иконки ===== */
-
 .link{
-    width:72px;
-    height:72px;
+    width:50px;
+    height:50px;
 
     border-radius:14px;
 
@@ -186,8 +176,6 @@ body{
 
     image-rendering:auto;
 }
-
-/* ===== Подсказки ===== */
 
 .link::after{
 
@@ -319,8 +307,6 @@ function updateClock(){
             minute: "2-digit"
         });
 }
-
-// ждать загрузки DOM (важно)
 window.addEventListener("DOMContentLoaded", () => {
     updateClock();
     setInterval(updateClock, 1000);
